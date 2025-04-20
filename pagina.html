@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Rodriguez Gil</title>
+    <link rel="stylesheet" href="pagina.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./img/logo.jpeg" alt="logo" class="logo">
+            <div class="menu-toggle">☰</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section id="inicio">
+            <h1>Bienvenido a Mi Portafolio</h1>
+            <p>Soy Pablo Rodríguez Gil, Backend Developer</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <div class="contenido">
+                <img src="img/foto.jpeg" alt="Foto de perfil de Pablo Rodríguez Gil" class="foto-perfil">
+                <p>Desarrollador apasionado por construir soluciones backend escalables y eficientes. Me encanta trabajar con Python, Node.js y bases de datos relacionales.</p>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyecto">
+                <h3>Proyecto nº1</h3>
+                <p>Estoy empleando mis conocimientos en mi propio portafolio, asi que este mismo seria mi primer proyecto.</p>
+                <a class="my-button" href="#">Ver Proyecto</a>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="icon-row">
+                <img src="img/python.png" alt="Python">
+                <img src="img/node.png" alt="Node.js">
+                <img src="img/sql.png" alt="SQL">
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder=" " required>
+                    <label for="nombre">Nombre:</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder=" " required></textarea>
+                    <label for="mensaje">Mensaje:</label>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pablo Rodríguez Gil. Todos los derechos reservados.</p>
+        <ul class="social-links">
+            <li><a href="https://github.com/pablogil25" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/pablo-rodriguez-gil-692468261/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <script src="pagina.js"></script>
+</body>
+</html>
