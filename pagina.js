@@ -1,3 +1,7 @@
+// Mostrar u ocultar el menú hamburguesa
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('header nav ul');
+
 // Desplazamiento suave para los enlaces del menú
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -6,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
 
-        // Cerrar el menú si se hace clic en un enlace (opcional, para móviles)
+        // Cerrar el menú si está abierto (en móviles)
         if (navMenu.classList.contains('show')) {
             navMenu.classList.remove('show');
         }
@@ -24,18 +28,38 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Mostrar u ocultar el menú hamburguesa
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('header nav ul');
-
+// Alternar menú hamburguesa
 menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // Evitar interferencias al hacer clic
-    navMenu.classList.toggle('show'); // Alternar clase 'show'
+    e.stopPropagation();
+    navMenu.classList.toggle('show');
 });
 
-// Cerrar el menú al hacer clic fuera de él
+// Cerrar menú al hacer clic fuera
 document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        navMenu.classList.remove('show'); // Ocultar el menú
+        navMenu.classList.remove('show');
+    }
+});
+
+// Captura de formulario de contacto
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formulario-contacto");
+
+    if (formulario) {
+        formulario.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            console.log("Nombre:", nombre);
+            console.log("Email:", email);
+            console.log("Mensaje:", mensaje);
+
+            alert(`¡Gracias, ${nombre}!\nTu mensaje fue recibido correctamente:\n\n"${mensaje}"`);
+
+            formulario.reset();
+        });
     }
 });

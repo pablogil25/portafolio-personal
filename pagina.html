@@ -18,7 +18,7 @@
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contactame</a></li>
             </ul>
         </nav>
     </header>
@@ -49,15 +49,12 @@
                 <p>Go clean es una plataforma donde puedes pedir a un socio trabajador de GoClean para que te haga el aseo.</p>
                 <a class="my-button" href="https://github.com/tonguiino/GoClean" target="_blank">Ver Proyecto</a>
               </div>
-            
               <div class="proyecto">
                 <h3>GoClean Back</h3>
                 <p>Empleamos el famoso htpp y completo donde el usuario podia registrase y iniciar sesion, union entre el fron y back.</p>
                 <a class="my-button" href="https://github.com/tonguiino/GoClean_back" target="_blank">Ver Proyecto</a>
               </div>
         </section>
-
-        
 
         <section id="habilidades">
             <h2>Habilidades</h2>
@@ -69,8 +66,8 @@
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
-            <form>
+            <h2>Contactame</h2>
+            <form id="formulario-contacto">
                 <div class="form-group">
                     <input type="text" id="nombre" name="nombre" placeholder=" " required>
                     <label for="nombre">Nombre:</label>
@@ -86,7 +83,6 @@
                 <button type="submit" class="btn-submit">Enviar</button>
             </form>
         </section>
-        
     </main>
 
     <footer>
@@ -97,6 +93,28 @@
         </ul>
     </footer>
 
-    <script src="pagina.js"></script>
+    <!-- Script para capturar y mostrar los datos del formulario -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const formulario = document.getElementById("formulario-contacto");
+
+            formulario.addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita recargar la página
+
+                const nombre = document.getElementById("nombre").value;
+                const email = document.getElementById("email").value;
+                const mensaje = document.getElementById("mensaje").value;
+
+                // Mostrar datos capturados
+                console.log("Nombre:", nombre);
+                console.log("Email:", email);
+                console.log("Mensaje:", mensaje);
+
+                alert(`¡Gracias, ${nombre}!\nTu mensaje fue recibido correctamente:\n\n"${mensaje}"`);
+
+                formulario.reset();
+            });
+        });
+    </script>
 </body>
 </html>
