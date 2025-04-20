@@ -1,19 +1,23 @@
 /* ==================== Variables de color ==================== */
 :root {
-    --primary-color: #2C3E50; /* Azul oscuro */
-    --secondary-color: #34495E; /* Gris oscuro */
-    --background-color: #ECF0F1; /* Fondo suave gris */
-    --accent-color: #E67E22; /* Naranja sofisticado */
-    --text-color: #123150; /* Texto principal */
-    --white: #ffffff; /* Blanco puro */
+    --primary-color: #2C3E50;
+    --secondary-color: #34495E;
+    --background-color: #ECF0F1;
+    --accent-color: #E67E22;
+    --text-color: #123150;
+    --white: #ffffff;
 }
 
 /* ==================== Estilos globales ==================== */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -23,11 +27,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* ==================== Transiciones globales ==================== */
-* {
-    transition: all 0.3s ease-in-out;
 }
 
 /* ==================== Header ==================== */
@@ -52,11 +51,7 @@ header {
     height: auto;
 }
 
-/* Menú de navegación */
-header nav {
-    position: relative;
-}
-
+/* ==================== Menú de navegación (pantallas grandes) ==================== */
 header nav ul {
     list-style: none;
     display: flex;
@@ -64,14 +59,6 @@ header nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-header nav ul.show {
-    transform: translateY(0);
-    opacity: 1;
 }
 
 header nav ul li a {
@@ -100,7 +87,7 @@ header nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Menú hamburguesa */
+/* ==================== Menú hamburguesa ==================== */
 .menu-toggle {
     display: none;
     font-size: 2rem;
@@ -109,14 +96,14 @@ header nav ul li a:hover::after {
     z-index: 1001;
 }
 
-/* ==================== Responsivo ==================== */
+/* ==================== Responsive (pantallas ≤768px) ==================== */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
     header nav ul {
-        display: none;
+        display: none;              /* oculto por defecto en móvil */
         flex-direction: column;
         gap: 10px;
         background-color: var(--primary-color);
@@ -128,6 +115,7 @@ header nav ul li a:hover::after {
         border-top: 1px solid var(--accent-color);
     }
 
+    /* Al hacer click: mostrar menú */
     header nav ul.show {
         display: flex;
     }
@@ -149,6 +137,7 @@ section {
     color: var(--text-color);
 }
 
+/* ==================== Sobre mí ==================== */
 #sobre-mi .foto-perfil {
     width: 120px;
     height: 120px;
@@ -164,6 +153,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
 }
 
 .proyecto:hover {
@@ -179,6 +169,8 @@ section {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .my-button:hover {
@@ -186,56 +178,7 @@ section {
     transform: scale(1.05);
 }
 
-/* ==================== Footer ==================== */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 20px;
-    text-align: center;
-}
-
-footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-}
-
-footer .social-links a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-footer .social-links a:hover {
-    color: var(--accent-color);
-}
-
 /* ==================== Habilidades ==================== */
-#habilidades ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-#habilidades li {
-    display: flex;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--primary-color);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-#habilidades li.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .icon-row {
     display: flex;
     justify-content: center;
@@ -300,5 +243,28 @@ textarea:not(:placeholder-shown) + label {
 input:focus, textarea:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 5px rgba(31, 108, 185, 0.3);
-    outline: none;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color);
 }
