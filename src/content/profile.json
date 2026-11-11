@@ -1,0 +1,24 @@
+{
+  "name": "Pablo Rodríguez Gil",
+  "role": "Software Developer",
+  "headline": "Building software that solves real business problems.",
+  "summary": "Software developer focused on backend development, automation and scalable web applications. Passionate about creating clean, maintainable solutions and continuously learning new technologies.",
+  "location": "Medellín, Colombia",
+  "availability": "Available for new opportunities",
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "B1 (Professional Working Proficiency)"
+    }
+  ],
+  "email": "",
+  "phone": "3024498608",
+  "github": "https://github.com/pablogil25",
+  "linkedin": "",
+  "resume": "",
+  "photo": "img/foto.jpeg"
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "portfolio-website",
+    "title": "Portafolio Profesional",
+    "slug": "portfolio-profesional",
+    "description": "Portafolio personal desarrollado para presentar experiencia, habilidades y proyectos.",
+    "role": "Developer",
+    "type": "Personal Project",
+    "status": "In Progress",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "features": [],
+    "liveUrl": "",
+    "repositoryUrl": "",
+    "coverImage": "",
+    "screenshots": [],
+    "seo": {}
+  },
+  {
+    "id": "goclean",
+    "title": "GoClean",
+    "slug": "goclean",
+    "description": "Plataforma para solicitar servicios de aseo mediante socios trabajadores.",
+    "role": "Developer",
+    "type": "Academic Project",
+    "status": "Completed",
+    "technologies": [],
+    "features": [],
+    "liveUrl": "",
+    "repositoryUrl": "https://github.com/tonguiino/GoClean",
+    "coverImage": "",
+    "screenshots": [],
+    "seo": {}
+  },
+  {
+    "id": "goclean-back",
+    "title": "GoClean Back",
+    "slug": "goclean-back",
+    "description": "Backend con autenticacion, registro de usuarios e integracion con frontend.",
+    "role": "Backend Developer",
+    "type": "Academic Project",
+    "status": "Completed",
+    "technologies": [],
+    "features": [],
+    "liveUrl": "",
+    "repositoryUrl": "https://github.com/tonguiino/GoClean_back",
+    "coverImage": "",
+    "screenshots": [],
+    "seo": {}
+  }
+]

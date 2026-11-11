@@ -1,0 +1,30 @@
+{
+  "backend": [
+    "Python",
+    "Django",
+    "Laravel",
+    "PHP",
+    "Node.js",
+    "REST APIs"
+  ],
+  "frontend": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React"
+  ],
+  "databases": [
+    "MySQL",
+    "MongoDB"
+  ],
+  "tools": [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Postman"
+  ],
+  "currentlyLearning": [
+    "Automation with Python",
+    "Software Architecture"
+  ]
+}

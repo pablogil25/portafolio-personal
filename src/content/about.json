@@ -1,0 +1,14 @@
+{
+  "title": "About Me",
+  "intro": "I'm Pablo Rodríguez Gil, a Software Developer passionate about building reliable software that solves real-world problems.",
+  "description": "I enjoy transforming ideas into scalable applications through clean architecture, maintainable code and continuous learning. I have experience developing backend services, web applications and automation solutions using modern technologies.",
+  "mission": "Create software that generates real value for businesses and users through quality engineering and continuous improvement.",
+  "vision": "Become a highly skilled Software Engineer capable of leading the development of products with global impact.",
+  "values": [
+    "Continuous learning",
+    "Clean code",
+    "Problem solving",
+    "Teamwork",
+    "Professional responsibility"
+  ]
+}
