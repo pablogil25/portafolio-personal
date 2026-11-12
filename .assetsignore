@@ -1,0 +1,7 @@
+docs/
+src/
+public/
+.agents/
+README.MD
+.editorconfig
+wrangler.jsonc
