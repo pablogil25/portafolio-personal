@@ -3,56 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Rodriguez Gil</title>
+    <title>Pablo Rodríguez Gil | Portafolio</title>
     <link rel="stylesheet" href="pagina.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="header-content"></div>
-            <div class="menu-toggle">☰</div>
+        <div class="header-content">
+            <button class="menu-toggle" type="button" aria-label="Abrir men&#250;" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <nav aria-label="Navegaci&oacute;n principal">
+                <ul id="primary-navigation">
+                    <li><a href="#inicio">inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre M&iacute;</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contactame</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contactame</a></li>
-            </ul>
-        </nav>
     </header>
     
     <main class="container">
         <section id="inicio">
-            <h1>Bienvenido a Mi Portafolio</h1>
-            <p>Soy Pablo Rodríguez Gil, Backend Developer</p>
+            <h1>Hola, soy Pablo Rodríguez Gil.</h1>
+            <p>Desarrollador de Software Junior
+Python · APIs REST · Microservicios · Automatización · IA aplicada</p>
         </section>
 
         <section id="sobre-mi">
             <h2>Sobre Mí</h2>
             <div class="contenido">
                 <img src="img/foto.jpeg" alt="Foto de perfil de Pablo Rodríguez Gil" class="foto-perfil">
-                <p>Desarrollador apasionado por construir soluciones backend escalables y eficientes. Me encanta trabajar con Python, Node.js y bases de datos relacionales.</p>
+                <p>Soy tecnólogo en Análisis y Desarrollo de Software. He creado aplicaciones, automatizado procesos e integrado APIs REST. Trabajo con Python, Laravel, React, SQL, MongoDB y Git; también he participado en análisis, pruebas y mejora de soluciones con equipos ágiles. Tengo conocimientos básicos de AWS y me interesa crecer en desarrollo backend e inteligencia artificial generativa.</p>
             </div>
         </section>
 
         <section id="proyectos">
             <h2>Proyectos:</h2>
             <div class="proyecto">
-                <h3>Rapimecanica</h3>
-                <p>Estoy empleando mis conocimientos en mi propio portafolio, así que este mismo sería mi primer proyecto.</p>
-                <a class="my-button" href="https://rapimecanica.pablorodriguezgil7.workers.dev/" target="_blank">Ver Proyecto</a>
+                <h3>Rapimecánica</h3>
+                <p>Sitio web para Rapimecánica, publicado en línea. Un proyecto donde aplico mis conocimientos de desarrollo web.</p>
+                <a class="my-button" href="https://rapimecanica.pablorodriguezgil7.workers.dev/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
             </div>
             <div class="proyecto">
                 <h3>GoClean</h3>
-                <p>Go clean es una plataforma donde puedes pedir a un socio trabajador de GoClean para que te haga el aseo.</p>
-                <a class="my-button" href="https://github.com/tonguiino/GoClean" target="_blank">Ver Proyecto</a>
+                <p>Plataforma para solicitar servicios de aseo y conectar con socios trabajadores.</p>
+                <a class="my-button" href="https://github.com/tonguiino/GoClean" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
               </div>
               <div class="proyecto">
                 <h3>GoClean Back</h3>
-                <p>Empleamos el famoso htpp y completo donde el usuario podia registrase y iniciar sesion, union entre el fron y back.</p>
-                <a class="my-button" href="https://github.com/tonguiino/GoClean_back" target="_blank">Ver Proyecto</a>
+                <p>Backend de GoClean con registro e inicio de sesión, integrado con el frontend de la plataforma.</p>
+                <a class="my-button" href="https://github.com/tonguiino/GoClean_back" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
               </div>
         </section>
 
@@ -66,7 +69,8 @@
         </section>
 
         <section id="contacto">
-            <h2>Contactame</h2>
+            <h2>Contáctame</h2>
+            <p class="contact-hint">Completa el formulario y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
             <form id="formulario-contacto">
                 <div class="form-group">
                     <input type="text" id="nombre" name="nombre" placeholder=" " required>
@@ -80,7 +84,8 @@
                     <textarea id="mensaje" name="mensaje" rows="5" placeholder=" " required></textarea>
                     <label for="mensaje">Mensaje:</label>
                 </div>
-                <button type="submit" class="btn-submit">Enviar</button>
+                <button type="submit" class="btn-submit">Enviar por WhatsApp <span aria-hidden="true">↗</span></button>
+                <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
             </form>
         </section>
     </main>
@@ -88,33 +93,11 @@
     <footer>
         <p>&copy; 2025 Pablo Rodríguez Gil. Todos los derechos reservados.</p>
         <ul class="social-links">
-            <li><a href="https://github.com/pablogil25" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/pablo-rodriguez-gil-692468261/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/pablogil25" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/pablo-rodriguez-gil-692468261/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </footer>
 
-    <!-- Script para capturar y mostrar los datos del formulario -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const formulario = document.getElementById("formulario-contacto");
-
-            formulario.addEventListener("submit", function (e) {
-                e.preventDefault(); // Evita recargar la página
-
-                const nombre = document.getElementById("nombre").value;
-                const email = document.getElementById("email").value;
-                const mensaje = document.getElementById("mensaje").value;
-
-                // Mostrar datos capturados
-                console.log("Nombre:", nombre);
-                console.log("Email:", email);
-                console.log("Mensaje:", mensaje);
-
-                alert(`¡Gracias, ${nombre}!\nTu mensaje fue recibido correctamente:\n\n"${mensaje}"`);
-
-                formulario.reset();
-            });
-        });
-    </script>
+    <script src="pagina.js" defer></script>
 </body>
 </html>
